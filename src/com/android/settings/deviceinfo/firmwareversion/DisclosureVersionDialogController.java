@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 AospExtended ROM Project
+ * Copyright (C) 2019 DisclosureOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,16 +30,16 @@ import android.view.View;
 import com.android.settings.R;
 import com.android.settingslib.RestrictedLockUtils;
 
-public class ExtendedVersionDialogController  implements View.OnClickListener {
+public class DisclosureVersionDialogController  implements View.OnClickListener {
 
     private static final String TAG = "ExtfirmwareDialogCtrl";
     private static final int DELAY_TIMER_MILLIS = 500;
     private static final int ACTIVITY_TRIGGER_COUNT = 3;
 
     @VisibleForTesting
-    static final int EXTENDED_VERSION_VALUE_ID = R.id.extended_version_value;
+    static final int DISCLOSURE_VERSION_VALUE_ID = R.id.disclosure_version_value;
     @VisibleForTesting
-    static final int EXTENDED_VERSION_LABEL_ID = R.id.extended_version_label;
+    static final int DISCLOSURE_VERSION_LABEL_ID = R.id.disclosure_version_label;
 
     private final FirmwareVersionDialogFragment mDialog;
     private final Context mContext;
@@ -49,7 +49,7 @@ public class ExtendedVersionDialogController  implements View.OnClickListener {
     private RestrictedLockUtils.EnforcedAdmin mFunDisallowedAdmin;
     private boolean mFunDisallowedBySystem;
 
-    public ExtendedVersionDialogController(FirmwareVersionDialogFragment dialog) {
+    public DisclosureVersionDialogController(FirmwareVersionDialogFragment dialog) {
         mDialog = dialog;
         mContext = dialog.getContext();
         mUserManager = (UserManager) mContext.getSystemService(Context.USER_SERVICE);
@@ -81,19 +81,19 @@ public class ExtendedVersionDialogController  implements View.OnClickListener {
     }
 
     /**
-     * Updates the extended version to the dialog.
+     * Updates the disclosure version to the dialog.
      */
     public void initialize() {
         initializeAdminPermissions();
         registerClickListeners();
 
-        mDialog.setText(EXTENDED_VERSION_VALUE_ID,
-                BidiFormatter.getInstance().unicodeWrap(Build.EXTENDED_DISPLAY_VERSION));
+        mDialog.setText(DISCLOSURE_VERSION_VALUE_ID,
+                BidiFormatter.getInstance().unicodeWrap(Build.DISCLOSURE_DISPLAY_VERSION));
     }
 
     private void registerClickListeners() {
-        mDialog.registerClickListener(EXTENDED_VERSION_LABEL_ID, this /* listener */);
-        mDialog.registerClickListener(EXTENDED_VERSION_VALUE_ID, this /* listener */);
+        mDialog.registerClickListener(DISCLOSURE_VERSION_LABEL_ID, this /* listener */);
+        mDialog.registerClickListener(DISCLOSURE_VERSION_VALUE_ID, this /* listener */);
     }
 
     /**

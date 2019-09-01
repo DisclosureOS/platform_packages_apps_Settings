@@ -26,7 +26,6 @@
         <item>@string/system_theme_style_light</item>
         <item>@string/system_theme_style_dark</item>
         <item>@string/system_theme_style_black</item>
-        <item>@string/system_theme_style_extended</item>
         <item>@string/system_theme_style_chocolate</item>
         <item>@string/system_theme_style_elegant</item>
     </string-array>

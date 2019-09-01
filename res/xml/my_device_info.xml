@@ -27,21 +27,21 @@
         android:layout="@layout/settings_entity_header"
         android:selectable="false"/>
 
-    <!-- About us -->
+    <!-- About us 
     <Preference
-        android:key="aex_about_info"
+        android:key="disclosure_about_info"
         android:order="1"
-        android:title="@string/aex_about_info"
-	android:summary="@string/aex_about_summary"
-        android:fragment="com.android.settings.AboutUs" />
+        android:title="@string/disclosure_about_info"
+	android:summary="@string/disclosure_about_summary"
+        android:fragment="com.android.settings.AboutUs" />  -->
 
-    <!-- Changelog -->
+    <!-- Changelog 
     <Preference
         android:key="changelog"
         android:order="2"
         android:title="@string/changelog_title"
         android:summary="@string/changelog_summary"
-        android:fragment="com.android.settings.extended.Changelog" />
+        android:fragment="com.android.settings.extended.Changelog" /> -->
 
     <!-- Device name -->
     <com.android.settings.widget.ValidatedEditTextPreference
